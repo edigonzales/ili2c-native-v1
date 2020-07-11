@@ -1,0 +1,1074 @@
+LATEST
+---------------------------
+- fix validation of MandatoryConstraint translation (#41)
+- fix validation of PlausibilityConstraint translation (#41)
+- fix validation of SetConstraint translation (#41)
+- fix validation of ExistenceConstraint translation (#41)
+- fix validation of UniquenessConstraint translation (#41)
+- rename --ilidirs to --modeldir (#50)
+
+ili2c 5.1.1 (2020-05-01)
+---------------------------
+- verifiy that mandatory constraint has logical expression (#17)
+- check datatype compatibility in constraints (#17)
+- test of expressions in MANDATORY CONSTRAINTs (#31)
+- fixed --check-repo-ilis reports IliRepository20.RepositoryIndex as invalid content (#45)
+- fails to detect a SET CONSTRAINT defined in a STRUCTURE (#47)
+- improve core/tool separation
+- adjust error message to 2.4 (#48)
+- added UserSettings.ILI_LANGUAGE_VERSION to force language version
+- iox-ili-1.21.0
+
+ili2c 5.0.8 (2020-04-01)
+---------------------------
+- iox-ili-1.20.18
+
+ili2c 5.0.7 (2020-04-01)
+---------------------------
+- fix SignAttribute.iterator() (ilivalidator#231)
+- added AttributeDef.getRootExtending() (ilivalidator#235)
+- fix ClassCastException: TypeAlias cannot be cast to LineType (umleditor#28)
+- implement IliRepository20 (#44)
+- ehibasics-1.3.0
+
+ili2c 5.0.6 (2020-03-02)
+---------------------------
+- ili24: support REFERENCE TO in CLASS (#42)
+- iox-ili-1.20.17
+
+ili2c 5.0.5 (2020-01-31)
+---------------------------
+- fix validation of ili1:AttributeDef/Explanation translation
+- iox-ili-1.20.16
+
+ili2c 5.0.4 (2019-12-23)
+---------------------------
+- fix TOPIC must be ABSTRACT if it contains abstract classes without concrete extensions
+- fix validation of ModelDef translation (#13)
+- fix validation of TopicDef translation (#13)
+- fix validation of ClassDef translation (#13)
+- fix validation of StructureDef translation (#13)
+- fix validation of AssociationDef translation (#13)
+- fix validation of AttributeDef translation (#13)
+- fix validation of DomainDef translation (#13)
+- fix validation of RoleDef translation (#13)
+- fix validation of UnitDef translation (#13)
+- fix validation of TextType translation (#13)
+- fix validation of EnumerationType, EnumTreeValueType translation (#13)
+- fix validation of AlignmentType, BooleanType translation (#13)
+- fix validation of NumericType translation (#13)
+- fix validation of FormattedType translation (#13)
+- fix validation of CoordType translation (#13)
+- fix validation of LineType translation (#13)
+- fix validation of OIDType translation (#13)
+- fix validation of BlackboxType translation (#13)
+- fix validation of ClassType translation (#13)
+- fix validation of AttributePathType translation (#13)
+- fix extended RoleDef
+- iox-ili-1.20.15
+
+ili2c 5.0.3 (2019-11-08)
+---------------------------
+- iox-ili-1.20.14
+
+ili2c 5.0.2 (2019-09-06)
+---------------------------
+- iox-ili-1.20.13
+
+ili2c 5.0.1 (2019-08-23)
+---------------------------
+- fails with NPE if PathMap entry (e.g. %JAR_DIR) is null
+- --listData fails with NPE if repos doesn't contain an ilidata.xml
+- support multiple --translation (#39) 
+- support CRS meta attr at MODEL level
+- iox-ili-1.20.12
+
+ili2c 5.0.0 (2019-04-01)
+---------------------------
+- failed to use proxy to access https repositories
+- read/write ili files always UTF-8 encoded
+- iox-ili-1.20.11
+
+ili2c 4.7.11 (2018-12-09)
+---------------------------
+- iox-ili-1.20.10
+
+ili2c 4.7.10 (2018-12-09)
+---------------------------
+- new function (--listData) to generate a list of data in the repositories
+- imd export: fixed NPE in INTERLIS.myClass()
+- fixed lookup of ili2.4 models
+- iox-ili-1.20.6
+- xsd24: add ili:domains if required
+- ili24: support ContextDef
+- use env variable ILI_CACHE to override default $user.home/.ilicache
+- fixed: validate OID-DomainRef in ClassDef/OID AS
+- moved parser to core
+- added object path parser
+
+ili2c 4.7.9 (2018-07-05)
+---------------------------
+- fixed: getAttributesAndRoles2() returned the extended embedded roles twice
+- translation-xml: read/write empty elements with "-" to force column existence in Excel
+- translation-xml: fixed ordering of exported models
+- Ili2 generator: fixed domaindef/unitdef output
+
+ili2c 4.7.8 (2018-06-22)
+---------------------------
+- fixed StackOverflow if name of translated model is the same as the origin model name
+- fixed NPE if empty subsidiarySite in ilisite.xml
+- new function (--oNLS) to write a translation-xml file
+- new function (--lang --nlsxml) to generate a translated ili-file (merge a original ili and a translation-xml)
+- new function (--listModels) to generate a list of models in the repositories
+- new function to generate a CRS transformed model (see new --trafo... arguments)
+- ehibasics-1.2.0
+- iox-ili-1.20.6
+- ili1: read meta attributes
+- fixed: getAttributesAndRoles2() returned the root of embedded roles instead of the most specific one
+
+ili2c 4.7.7 (2018-02-08)
+---------------------------
+- MakeIliModelsXml: show ili2c version as program version (instead of iox-ili)
+- API: new function TransferDescription.getElement(scopedName) to simplify access to model elements
+- fixed https: repository access
+- TRANSLATION OF: fixed domain/type consistency check 
+- ili23: check that max overlaps doesn't undercut the accuracy of the coord domain
+- iox-ili 1.20.2 
+
+ili2c 4.7.6 (2017-12-29)
+---------------------------
+- added getOpposideForNonNavigableRoles()
+
+ili2c 4.7.5 (2017-11-23)
+---------------------------
+- support REFSYS/metaaattr CRS
+- new function --clone-repos to clone repositories
+- iox-ili 1.20.0
+
+ili2c 4.7.4 (2017-10-20)
+---------------------------
+- iox-ili 1.19.8
+
+ili2c 4.7.3 (2017-05-24)
+---------------------------
+- cmdline/gui: log ili2c version
+- fixed FormattedType isValueInRange() if maxValue=2110-1-1
+- fixed attr.getScopedName()
+- ili22: read ilidoc+metaattrs
+- imd07: fixed NPE
+- iligml20: fixed export of assoc with more than two roles (CoordSys)
+
+ili2c 4.7.2 (2017-04-13)
+---------------------------
+- fixed extension of MANDATORY enumeration type (RoadsExdm2ien)
+
+ili2c 4.7.1 (2017-04-10)
+---------------------------
+- fixed NPE with ViewDef (ReseauFerre_V1)
+- improved lookup of dependent model (if ili1 translation)
+
+ili2c 4.7.0 (2017-04-06)
+---------------------------
+- support TRANSLATION OF
+- new option --translation
+- API: refactored getScopedName()
+- fixed: allow MANDATORY of EXTENDED attributes with enumeration without repeating the enumeration
+- fixed: CONSTRAINTS OF classes in base topic
+- fixed: Role-Name resolution in PathEl if Association is only available in context of ObjectOrAttributePath
+- API: fixed UniquenessConstraint/preCondition
+
+ili2c 4.6.1 (2017-01-09)
+---------------------------
+- skip repositories with corrupt ilimodels.xml/ilisite.xml
+- improved repository access error messages
+- ili23: fixed detect/rolename conflict with external target class
+
+ili2c 4.6.0 (2016-12-30)
+---------------------------
+- support repositories with https
+- added eCH-0118-2.0 support (option -oILIGML2)
+- ili24: support BAG/LIST OF AttrType
+- ili24: support MULTICOORD, MULTIPOLYLINE, MULTISURFACE, MULTIAREA
+- added IlisMeta16 support (option -oIMD16)
+
+ili2c 4.5.27 (2016-11-02)
+---------------------------
+- XSD23: fixed BLACKBOX type schema generation
+- iox-ili 1.13.5
+
+ili2c 4.5.26 (2016-09-19)
+---------------------------
+- iox-ili 1.13.4
+
+ili2c 4.5.25 (2016-08-29)
+---------------------------
+- iox-ili 1.13.1
+
+ili2c 4.5.24 (2016-08-11)
+---------------------------
+- iox-ili: use own objpool instead of jdbm-2.4.jar
+
+ili2c 4.5.23 (2016-07-08)
+---------------------------
+- fixed: "Duplicate EnumElement name" if EXTENDED AttributeDef with equal DomainRef
+- iox-ili 1.12.0
+
+ili2c 4.5.22 (2016-04-07)
+---------------------------
+- iox-ili 1.11.5
+- fixed AssociationDef.getOid() so that it returns null if it is not marked identifiable
+- iliexp: fixed missing space in "AREA WITHOUT OVERLAPS"
+- ili2: check that OVERLAPS in extended types are more restrictive
+- API: make ImdGenerator(writer) visible/pulic
+
+ili2c 4.5.21 (2016-02-04)
+---------------------------
+- iox-ili 1.11.4
+- refactored dependency to iox-ili.jar
+- API: LineType.getP() added
+
+ili2c 4.5.20 (2015-12-23)
+---------------------------
+- fixed NullPointerException in AbstractClassDef.getOid()
+
+ili2c 4.5.19 (2015-12-09)
+---------------------------
+- iox-ili 1.11.2
+- improved error message if missing OVERLAPS
+- changed semantic of AbstractClassDef.getOid() to return OID of this class or base class
+
+ili2c 4.5.18 (2015-11-23)
+---------------------------
+- gml,xtf,xtf24: fixed export of 0.000001 
+- iox-ili-1.11.1
+
+ili2c 4.5.17 (2015-09-10)
+---------------------------
+- gml: fixed name mapping of area linetable
+- iox-ili 1.11.0
+
+ili2c 4.5.16 (2015-09-04)
+---------------------------
+- iox-ili 1.10.6
+
+ili2c 4.5.15 (2015-08-14)
+---------------------------
+- iox-ili 1.10.5
+
+ili2c 4.5.14 (2015-08-10)
+---------------------------
+- ili23: UniquenessConstraint with roleDef as PathEl fails ("roleName" is not a path to an attribute)
+- repo-check: log ili2c version
+- repo-check: failed to check more than one model with an obsolete version
+- iox-ili 1.10.4
+- gml: added ILIGML (pre-eCH-0118) xsd export as -oETF1
+
+ili2c 4.5.13 (2015-07-03)
+---------------------------
+- ili23: accept extension of different sub-sub-enumerations, e.g. (rot.orange (dunkel,hell), rot.karmin (dunkel,hell))
+
+ili2c 4.5.12 (2015-06-03)
+---------------------------
+- gui: set default file filter in file chooser dialog
+- ili23: check that UNIQUE does not use/reference a whole structure
+- ili1: avoid name conflict if target table of refattr contains an attribute with same name as source table
+- iox-ili 1.10.2
+
+ili2c 4.5.11 (2015-03-25)
+---------------------------
+- ili23: check EXTERNAL/DEPENDS ON also in AssociationDef
+
+ili2c 4.5.10 (2015-03-19)
+---------------------------
+- ili23: check for EXTERNAL/DEPENDS ON limited to RESTRICTION classRefs
+- ili1: allow SURFACE without OVERLAPS
+
+ili2c 4.5.9 (2015-03-13)
+---------------------------
+- re-added (lost) -oUML option
+- gml: fixed EnumTreeValueType
+- ili23: fixed detection of incomplete SURFACE/AREA definitions (missing OVERLAPS)
+- ili23: check that CONSTRAINTS OF references a viewable in the same scope
+- ili23: check for EXTERNAL because of reference attributes in nested structure attributes 
+- ili23: check for DEPENDS ON because of reference attributes in imported structures
+
+ili2c 4.5.8 (2015-02-04)
+---------------------------
+- bug ili22: missing identity (TID) on ASSOCIATIONs that are not embedded
+
+ili2c 4.5.7 (2015-01-30)
+---------------------------
+- gml: fixed illegal schema generation if ordered RoleDef
+- gml: adjusted schema generation to approved eCH-0118-1.0
+
+ili2c 4.5.6 (2014-12-30)
+---------------------------
+- xsd: generate xsd:date, xsd:time, xsd:dateTime for FORMAT INTERLIS.XmlDate... domains
+- bug iliexp: failed to export SET CONSTRAINT
+- bug iliexp: failed to export ViewDef/Selection
+- bug iliexp: failed to export ViewDef/ALL OF
+- ili24: syntax DEFFERED GENERICS added
+
+ili2c 4.5.5 (2014-08-08)
+---------------------------
+- imd: export Ili1TransferElement
+
+ili2c 4.5.4 (2014-07-09)
+---------------------------
+- --check-repo-ilis: new function to check all ili files in a given repository
+- iox-ili 1.10.0
+- ili24 syntax implemented
+
+ili2c 4.5.3 (2014-04-04)
+---------------------------
+- xsd: fixed missing complexType of VIEW definition in VIEW TOPIC
+- bug: failed to report missing DEPENDS ON with cross topic EXTERNAL RoleDef/ReferenceAttr
+- xsd: added xtf24 support
+
+ili2c 4.5.2 (2014-03-13)
+---------------------------
+- bug: failed to report missing DEPENDS ON with cross topic existence constraints
+- xsd: sort references to structures in structattr xsd:choice
+- xsd: sort models to get always the same xsd for the same set of models
+
+ili2c 4.5.1 (2013-12-09)
+---------------------------
+- iox-ili 1.9.0
+
+ili2c 4.5.0 (2013-11-06)
+---------------------------
+- imd: export meta-attributes of CONSTRAINT
+
+ili2c 4.4.14 (2013-09-02)
+---------------------------
+- bug imd: fixed export of ili1: DOMAIN dateDomain=DATE;
+- bug ili2exp: fixed export of DOMAIN dateDomain=DATE;
+- keep ordering of TaggedValues
+
+ili2c 4.4.13 (2013-07-31)
+---------------------------
+- bug imd: fixed multiple "Super" on attr.TYPE (if "attr : MANDATORY FormattedType-DomainRef") 
+- bug: map %JAR_DIR to ili2c/standard
+- bug ili2exp: fixed export of ANYSTRUCTURE 
+- bug ili2exp: fixed export of qualified DomainRef
+- bug ili2exp: fixed export of EnumTreeValueType
+- bug ili2exp: fixed export of ModInfo EXTENDS NotASuperTopic.ModInfo
+- keep ordering of MODEL IMPORTS
+
+ili2c 4.4.12 (2013-04-29)
+---------------------------
+- API: TransferDescription.INTERLIS rolled-back to non-static due to init/classloader error
+- iox-ili 1.8.0
+
+ili2c 4.4.11 (2013-04-12)
+---------------------------
+- BETA added XRF xsd generator
+- API: The metamodel object "Type" implements "java.util.Cloneable"
+- API: implement generics as far as possible in the Interlis metamodel classes
+- IMPL: Replaced instances of "StringBuffer" by the faster non-synchronized "StringBuilder" in contexts where concurrency is not an issue
+- IMPL: list.toArray(new Obj[0])); have been replaced by: list.toArray(new Obj[list.size()])); because it spares a second array object allocation
+
+ili2c 4.4.10 (2012-11-21)
+---------------------------
+- iox-ili 1.7.1
+
+ili2c 4.4.9 (2012-11-15)
+---------------------------
+- iox-ili 1.7.0
+
+ili2c 4.4.8 (2012-08-31)
+---------------------------
+- iox-ili 1.6.8
+- bug: XtfReader failed to skip element content of OIDType
+- BETA: -oUML (UML2/XMI export)
+
+ili2c 4.4.7 (2012-07-23)
+---------------------------
+- iox-ili 1.6.7
+- bug: XtfWriter failed to write OIDType with XML-attri
+
+ili2c 4.4.6 (2012-06-28)
+---------------------------
+- iox-ili 1.6.6
+
+ili2c 4.4.5 (2012-06-06)
+---------------------------
+- iox-ili 1.6.5
+- bug xsd: missing OIDSPACE if CLASS with OID but no OID-DomainDef
+
+ili2c 4.4.4 (2012-03-23)
+---------------------------
+- updated ehibasics resources
+- iox-ili 1.6.3
+- API: added Element.getDefidx() to help in sorting model elements
+- Units.ili: fixed definition of Pascal
+- IliSite09.ili: added
+- IliRepository09.ili added
+- bug imd: Ili1Format missing
+- ili1 gen: improved ili2->ili1 translation
+- bug imd: fixed "attr : MANDATORY Domain" to reference DomainDef as "Super" on attr.TYPE 
+
+ili2c 4.4.3 (2012-01-04)
+---------------------------
+- bug imd: java.lang.IllegalStateException if extended DomainDef with FormattedType
+- bug imd: suppress Class/Oid on instances of ASSOCATION (without OID) inside of TopicDef...OID AS
+
+ili2c 4.4.2 (2011-12-22)
+---------------------------
+- bug gui: java.lang.NullPointerException if $HOME/.ili2c doesn't exist
+- bug xsd: INTERLIS.UUIDOID missing from generated xsd
+- bug imd: missing ExistenceConstraint
+- bug imd: missing ClassDef/OID AS
+- bug imd: missing TopicDef/OID AS
+- bug imd: missing TopicDef/BASKET OID AS
+- bug ili2exp: missing ClassDef/OID AS
+- bug api: missing "NO OID"
+- added support to find models given by name
+- added support do have placeholders in ilipath
+- bug xsdexp: added xml prolog/fixed character encoding
+- bug xtf: no TID on instances where ASSOCATION is without OID property
+- bug IlisMeta07: added ExistenceConstraint/Attr
+- iox-1.6.2
+
+ili2c 4.4.1 (2011-09-05)
+---------------------------
+- iox-1.6.1 (new MakeIliModelsXml)
+- new ch.interlis.ilirepository.MakeIliModelsXml that can update existing file and reads meta attributes (precursorVersion, tags, furtherInformation, furtherMetadata, Original, IDGeoIV, technicalContact)
+- kind of output selector: list of items reordered
+- doc (index.html) updated
+
+ili2c 4.4.0 (2011-08-19)
+---------------------------
+- upgraded to jre 1.6.0
+- switched from wstx to jre StaX
+- added model repositories support (menu item "Tools/Model Repositories...")
+- added IlisMeta07 output
+
+ili2c 4.3.7 (2011-07-04)
+---------------------------
+- bug iliexp: no output of MetaDataUseDef and MetaObjects
+- bug iliexp: no output of MetaAttributes
+
+ili2c 4.3.6 (2011-06-29)
+---------------------------
+- bug: model INTERLIS defined without language "(en)" 
+
+ili2c 4.3.5 (2011-06-23)
+---------------------------
+- bug: failed to write ili2 text of one single model element
+- bug ili2 exp: failed to generate FormattedType
+
+ili2c 4.3.4 (2011-01-13)
+---------------------------
+- bug ili2: unexpected error if UNIQUE (LOCAL) in STRUCTURE
+- bug: failed to parse DEC "0.1e2"
+- bug: unexpected exception "PrecisionDecimal cannot be cast to java.math.BigDecimal"
+
+ili2c 4.3.3 (2010-12-28)
+---------------------------
+- bug ili2 exp: failed to generate 0.000000000000000 
+- bug ili2 exp: failed to generate decConst without decimal digits in UnitDef (e.g. Minute [min] = 60 [s];)
+- ili2 exp: generate explicit factor "1" in unitDef (e.g. Meter [m] = 1 [INTERLIS.m];)
+- ili2 exp: report StructuredUnit and StructuredUnitType as error to support model migration from ili22 to ili23
+- API: changed PrecisionDecimal (removed extension of BigDecimal)
+- API: changed Constant.Numeric, NumericallyDerivedUnit.Factor
+
+ili2c 4.3.2 (2010-11-16)
+---------------------------
+- bug ili2imd: failed to get parent of FormalArgument 
+- added branch support to the build script
+- bug fmt: superfluous DOMAIN in output
+- changed fmt descritioon in file selector filter to "INTERLIS 1 format"
+
+ili2c 4.3.1 (2010-08-26)
+---------------------------
+- bug fmt: NegativeArraySizeException if ili2:TEXT without maxLength
+- bug: missing filename/lineno in error message (with IllegalArgumentException)
+- bug ili2 exp: failed to generate MTEXT
+- bug ili2 exp: failed to generate ENUMVAL, ENUMTREEVAL
+- bug: missing len(), lenM(), trim(), trimM(), isEnumSubVal(), inEnumRange(), areAreas() in model INTERLIS
+- bug: accept duplicate extension of same base role
+- bug ili2 exp: fixed unbalanced indentation
+- bug ili2: superfluous errmsg if duplicate rolename in association
+- bug ili2.2: doesn't check name uniqueness of EnumElements
+- enable meta attributes on MetaObjects
+- added new expermintal transferformat (ETF1)
+
+ili2c 4.3.0 (2009-11-19)
+----------------------------
+- API: minor changes to support model repository handling
+
+ili2c 4.2.0 (2009-08-24)
+----------------------------
+- failed to report line number if TEXT extends a NUMERIC type
+- use metaAttributes to finetune xsd (addAllInterlisTypes, addAliasTable, supportSourceBasketId, supportIncrementalTransfer, supportInconsistentTransfer, supportPolymorphicRead)
+- added metaAttribute to define minimal charset
+- bug ili2: failed to check that LINE ATTRIBUTE requires a structure
+- bug ili2: failed to check that a coord type can only extend coord type
+- bug ili2: wrong report of duplicate name of extended attribute in an extended association
+
+ili2c 4.1.1 (2009-02-20)
+----------------------------
+- bug: failed to scan ili1 model (unexpected token "TRANSFER")
+- runtimeParameterDef, lineFormTypeDef: parse metaAttribute after keyword 
+
+ili2c 4.1.0 (2009-02-05)
+----------------------------
+- bug ili1: split ili1 and ili2 parser/lexer so that ili1 can parse NULL as a valid ili1-name
+- added support to define meta-attributes in a ili file
+- bug ili2: no line nr on error message '"Attrname" is not a path to an attribute'
+- ili2xsd: use restricted types for xml-attributes KIND, CONSISTENCY, OPERATION
+
+ili2c 4.0.2 (2008-12-19)
+----------------------------
+- bug GML: Exception if ili22:StructUnitType
+- bug: failed to detect (illegal) use of a class-name in a StructureRef
+
+ili2c 4.0.1 (2008-11-19)
+----------------------------
+- bug GML: generated extended RoleDef/AttributeDef 
+- GML: declare INTERLIS_1_DATE as xsd:token
+- bug GML: missing " in xsd:name if ili-attribute with inline xsd type declaration 
+
+ili2c 4.0.0 (2008-10-31)
+----------------------------
+- GML: updated to draft ILIGML spec (BETA)
+
+ili2c 3.6.8 (2008-08-25)
+----------------------------
+- bug: added AttributePathType to parser
+- bug ili2exp: added TRANSIENT
+- bug: failed to recognize >> in AttributePathConst
+- bug: ClassCastException if assocRef doesn't reference an assoc
+- bug: didn't detect TRANSIENT attr without factor
+- bug: didn't detect changed TRANSIENT mode in extended attr
+- bug: failed to filter "Info:" messages with option --quiet
+- ili2exp: added AttributePathType
+- ili2exp: added spaces between arg name and type in FunctionDef
+- ili2xsd: skip TRANSIENT attributes
+
+ili2c 3.6.7 (2008-06-13)
+----------------------------
+- bug: lost ili1 ref attrs
+
+ili2c 3.6.6 (2008-05-23)
+----------------------------
+- revert: don't check that an struct attr has concrete structure
+ 
+ili2c 3.6.5 (2008-04-17)
+----------------------------
+- new version of StandardSymbology.ili
+- improved error message if classOrAssociationRef references not a CLASS/ASSOCIATION
+- added line number to error message "The name of the model conflicts with MODEL..."
+- bug: NullPointerException if extending non existing role
+- enable association access with target-role-name only if association defined in same topic as target class
+
+ili2c 3.6.4 (2008-03-28)
+----------------------------
+- bug ili1 fmt: writing of domainname in fmt instead of format 
+- include expected class in error message about missing metaobjects  
+- check that a COORD domain refers only an axis of an INTERLIS.COORDSYSTEM as refsys
+- bug: enable that a structure can restrict ANYSTRUCTURE
+- bug: enable that an attribute with an abstract base structure but only concrete restrictions is non-anbstract
+- bug: failed to parse "ATTRIBUTE OF @ argname"
+- bug: ClassCastException if "ATTRIBUTE OF attrname" in FunctionDef
+- added line number to error message "An association requires at least two role definitions."
+
+ili2c 3.6.3 (2008-02-28)
+----------------------------
+- bug: failed to compile VIEW with EXTENDS
+- bug: failed to compile object path where association end has cardinality>1
+- bug: failed to compile attr : ANYSTRUCTURE
+- no filename/linenumber in some error messages
+- bug: failed to check that an abstract struct requires an abstract attribute
+- bug: failed to check syntax of formatted values
+- bug: failed to rangecheck formatted values
+- bug: scan additional dirs/files only if given fileset incomplete
+
+ili2c 3.6.2 (2008-02-08)
+----------------------------
+- bug: ClassCastException with View
+- bug ili2.2: baseViewable not set in DecompositionView
+
+ili2c 3.6.1 (2008-02-06)
+----------------------------
+- return DOS-error code !=0 if compiler fails
+- improved error message, if a given ili-file doesn't exist
+- added INTERLIS.BaseTimeSystems.GregorianCalendar INTERLIS.BaseTimeSystems.UTC
+- added INTERLIS.StartSegment, INTERLIS.StraightSegment, INTERLIS.ArcSegment
+- bug ili2.2 parser: NullPointerException if model with MetaDataUseDef 
+- bug ili2.3 parser: checked wrong syntax in ClassConst
+
+ili2c 3.5.7 (2008-01-10)
+----------------------------
+- added helpers for ili2imd
+- added RESTRICTIONS in ArgumentType
+- added ENUMVAL, ENUMTREEVAL in ArgumentType
+- added ALL [ '(' RestrictedClassOrAssRef | ViewableRef ')' ] in Argument
+- added RoleDef 'OR'
+- added AttributeDef ':=' Factor
+- added RoleDef 'HIDING'
+- ili2.3: added checking of MetaObjets
+- added Inspection in Factor
+- added PARAMETER in Factor
+- Bug: failed to compile an ASSOCIATION without name
+
+ili2c 3.5.6 (2007-12-06)
+----------------------------
+- Bug (1844173): doesn't check name uniqueness of EnumElements
+- Bug ili1 (1836427): if refattr name is the same as table name, exception reporting duplicate role name
+- Bug ili1 (1836424): if name of generated ili2-assoc is the same as an existing table name, exception reporting duplicate assoc name
+- Bug ili1: Ili1 to Ili2 didn't define lineattrib structure before table, if table contained a refattr
+- Bug: failed to open help file
+
+ili2c 3.5.5 (2007-11-12)
+----------------------------
+- API: added preCondition to UniquenessConstraint
+- API: added SetConstraint
+- Bug ili1 output: class cast exception if IDENT with refattr
+- Bug ili1 output: DATE exported as INTERLIS_1_DATE
+- Bug: use of wrong  PathElBase() constructor in ili22parser
+
+ili2c 3.5.3 (2007-10-12)
+----------------------------
+- API: added currentView to PathElBase constructor 
+
+ili2c 3.5.2 (2007-10-1)
+----------------------------
+- Bug: FormattedType: added postfix to baseattrref even if none present in the input model
+- Bug: FormattedType: tested for non-CompositionType if CompositionType required
+- added format definitions to XmlDate, XmlTime, XmlDateTime
+
+ili2c 3.5.1 (2007-09-26)
+----------------------------
+- Bug: didn't report errors to GUI
+
+ili2c 3.5.0 (2007-09-25)
+----------------------------
+- added switch --quiet to suppress any non-error messages
+- Bug: reported duplicate models, if filename without path given on cmdline
+- list alias entries always with same ordering
+- Bug: wrong default cardinality for composition (ili23: 0..1; ili22: 1)
+
+ili2c 3.4.2 (2007-07-19)
+----------------------------
+- failed to compile CoordSys.ili, Time.ili
+- failed to report status to programs if compiler failed
+- Model INTERLIS didn't define objectCount() 
+- duplicate attributes (Hours, Minutes, Seconds) in INTERLIS.TimeOfDay
+
+ili2c 3.4.1 (2007-06-29)
+----------------------------
+- Bug ili1: nullpointerexception if lineattrib with DomainRef
+- Bug: GUI didn't support ili22 and ili23
+- switch added to GUI to auto scan for models
+
+ili2c 3.4.0 (2007-05-15)
+----------------------------
+- bug: metaObjectRef not resolved if metaobject declared in another model
+- check syntax of issuer URI
+- Bug ili1: Ili1 to Ili2 should define lineattrib structure before its use
+- Bug ili1: Ili1 to Ili2 should define unit m2 before its use
+- Bug ili1: Ili1 to Ili2 SURFACE/AREA type should define explicit control point domain
+- ili1: read DATE as INTERLIS.XmlDate
+- ili1 output: sort tables if ili2 model
+- ili1 output: print documentation
+- ili1 output: print explanation
+- ili1 output: print model version/issuer
+- read ili22 and ili23
+- generate xsd22 if ili22
+- add model version as appinfo to xsd
+- handle AttributeDef.TRANSIENT
+- handle ParameterDef.ABSTRACT
+- handle ParameterDef.FINAL
+- bug: null type if domain is "11" .. "22" (a kind of formattedtype)
+
+ili2c 3.3.0 (2007-02-22)
+----------------------------
+- auto scan of ili files (added switch --no-auto to disable it)
+- added location to error message "unexpected char"
+- Bug: NullPointerException if unknown target table in ili1 ref attr
+- Bug: exception in restrictedClassOrAssRef if target class at model level
+- Bug ili2 output: generate INTERLIS 2.3;
+
+ili2c 3.2.0 (2006-11-08) BETA
+----------------------------
+- GML: updated to GML 3.2
+
+ili2c 3.1.2 (2006-08-11) BETA
+----------------------------
+- error handling refactored
+- Bug: wrong syntax implemented at rule TopicDef (OID...';')
+- Bug: didn't accept FunctionDef at topic level
+
+ili2c 3.1.1 (2006-08-08) BETA
+----------------------------
+- Bug: wrong syntax implemented at rule ClassDef (OID...';')
+- Bug: wrong synatx implemented at rule FormatedType
+
+ili2c 3.1.0 (2006-07-05) BETA
+----------------------------
+- unlimited length TEXT implemented
+- MTEXT implemented
+- AssociationDef.Cardinality
+- XML-Schema: TEXT, MTEXT implemented
+- read ilidoc comments
+- Bug: doesn't check that an association has at least two roles
+- Bug: crash if refattr in struct at model level 
+
+ili2c 3.0.2 (2006-01-26)
+----------------------------
+- ModelDef: read issuer, version
+- Annex A update
+- XML-Schema: generate element COMMENT with type xsd:string
+- XML-Schema: simplified schema for CLASSes
+- XML-Schema: adapted to refhb 2.3
+
+ili2c 3.0.1 (2005-08-31)
+----------------------------
+- bug fixed in syntax rule MetaDataUseDef
+- syntax rules cross checked with language spec 2.3-2005-06-16
+
+ili2c 3.0.0 (2005-08-19)
+----------------------------
+- syntax adapted to refhb 2.3
+- contracts adapted to refhb 2.3
+- gui adapted to refhb 2.3
+
+ili2c 2.6.2 (2005-09-15)
+----------------------------
+- iom: added ORDER_POS in StructuredUnit_Part.structuredUnit  
+- ModelScan: NullPointerException if no files found with given models
+- Bug iom: null pointer exception at iom.VisitDomain.writeObject:getContainer
+
+ili2c 2.6.0 (2005-01-10)
+----------------------------
+- XML-Schema: generate version of ili2c.jar as xsd:appinfo element
+- Bug XML-Schema: cross topic associations were encoded as standalone links when they should be embedded 
+- Bug: default cardinality of struct attrs should be 0..* (not 1..*)
+- XML-Schema: ORDER_POS changed to positiveInteger
+- iom: added ORDER_POS in NumericType.coordType  
+- iom: added ORDER_POS in Enumeration_Element.enumeration  
+- iom: added ORDER_POS in ViewableAttributesAndRoles.attributesAndRoles
+- iom: added ORDER_POS in Evaluable.expression_Multi
+- iom: added ORDER_POS in FormalArgument.functionDef
+- iom: added ORDER_POS in Evaluable.functionCall
+- iom: added NumericalType->Unit
+- iom: added NumericalType->RefSystemRef
+- iom: added RefSystemRef
+- iom: added Constant_ReferenceToMetaObject->MetaObject
+- iom: added MetaObject
+- iom: added Ili1Format
+- Bug iom: Attribute "max" of StructuredUnit_Part was same value as minimum
+
+
+ili2c 2.5.0 (2004-12-02)
+----------------------------
+- iom: added units to export
+- iom: added constraints to export
+- iom: include Alias table in output
+- XML-Schema: NEXT_TID changed to ORDER_POS
+- Bug: elements of BOOLEAN have wrong case; should be true and false
+- Bug XML-Schema: illegal xsd if attribute with just TEXT
+- Bug iom: null pointer exception with some models (test22_gr)
+- Bug XML-Schema: don't generate elements for derived associations
+- Bug ili1: doesn't compile IDENT with refattr (errmsg: 'no attribute') 
+- Bug ili2 output: in constraints no '(' ')' after 'NOT' 
+- Bug XML-Schema: wrong type if numeric with no precision
+- Bug: doesn't accept an extended structure of a base structure that is defined in the model of the base topic.
+
+
+ili2c 2.4.0 (2004-10-09)
+----------------------------
+- exports model as XML (interlis tranfer format)
+- GUI: Directory selector improved
+- Bug: doesn't accept a class restriction in a RoleDef if base target is ANYCLASS
+- Bug: EXTENDS of an EXTENDED Class doesn't work
+- Bug: doesn't check that a class Adresse doesn't EXTENDS a class Adresse in extended TOPIC
+- Bug: requires ViewDef to be abstract in case of abstract base viewables
+- Bug: doesn't check that ViewDef is abstract in case of abstract attribute as part of ALL OF
+- Bug XML-Schema: exception if attribute with a enum domain that is restricted to MANDATORY
+- Bug XML-Schema: ordering of attributes and roles in associations not according to spec (roles should be first)
+- Bug: doesn't assume cardinality 1 in composition if unspecified
+- Bug: should't embedd association if target of end is not defined in same topic
+
+
+ili2c 2.3.0 (2004-08-18)
+----------------------------
+- preliminary GML 3.1 application schema generator added
+
+
+ili2c 2.2.0 (2004-07-23)
+----------------------------
+- added patches 20040522 from Bruno Ritz to support ibito
+- XML-Schema: placement and ordering of embedded associations changed
+- GUI: new button to clear message log
+- contact e-mail address changed to compiler@interlis.ch
+
+
+ili2c 2.1.13 (2004-04-20)
+----------------------------
+- Bug GUI: update boid mapping entry after edit dialog
+- Bug: THISAREA, THATAREA return SurfaceType instead of Viewable
+- Bug: doesn't accept an AssociationDef as target of a RoleDef (class cast exception)
+
+
+ili2c 2.1.12 (2004-02-19)
+----------------------------
+- standard models added to distribution
+- example models from reference handbook added to distribution
+- About ili2c dialog (to show ili2c and jvm version)
+- Bug ILI1 output: no IDENTs in output
+- Bug ILI2 output: no AssociationDefs in output
+- Bug XML-Schema: tags of extended structures were missing in structattrs 
+- Bug XML-Schema: element R in ArcPoint is optional
+- Bug XML-Schema: base enum elements were missig in an extended attribute if type defined as part of attribute  
+- Bug ILI2 output: ClassCastException with UniquenessConstraint in View or Association
+
+
+ili2c 2.1.11 (2004-01-04)
+----------------------------
+- GUI: set default name of output file to name of last file in input list
+- API: new function Topic.getOid()
+- API: Type of Topic.oid changed to Domain
+- Bug: reference to function inside GraphicDef resolved with wrong namespace
+- Bug: accepts a concrete structure that extends INTERLIS.LineSegment
+- Bug: missing INTERLIS.LineSegment
+- Bug: INTERLIS.LineGeometry->Segments has wrong type
+- Bug: correct name of INTERLIS.LineCord is LineCoord
+- Bug: accepts INTERLIS.functionName
+- Bug: accepts reference to unqualified imported function 
+
+
+ili2c 2.1.10 (2003-12-10)
+----------------------------
+- XML-Schema: alias table generation
+- GUI: keep directory across multiple compiler runs
+- GUI: new button to edit mappings
+- GUI: remove all selected files or mappings from list
+- GUI: after remove from list, select next entry
+- GUI: new switch to enable/disable existence check of metaobjects
+- Bug: doesn't check that a structure is only used as a structure attribute
+- Bug: doesn't check EXTERNAL on cross topic RoleDefs
+- Bug XML-Schema: NUMERIC throws an null pointer exception
+
+
+ili2c 2.1.9 (2003-08-29)
+----------------------------
+- Bug: doesn't check a max cardinality of 1 in a composition
+- Bug: [Axis] in RefSys in ili2 export uses illegal syntax 
+- Bug: <DomainRef> in RefSys doesnt work in ili2 export 
+- Bug: UniquenessConstraint and ExistenceConstraint were missing from ili2 export
+- Bug: ObjectType and METAOBJECT were missing from ili2 export
+- Bug: ClassType, BasketType, OIDType were missing from ili2 export
+- Bug: references to BOOLEAN, HALIGNMENT, VALIGNMENT should be unqualified in ili2 export
+- Bug: doesn't know view basename in EQUAL part of Aggregation View
+- Bug: LineCoord,myClass,isSubClass,isOfClass,elementCount,convertUnit were missing from model INTERLIS
+- Bug: ANYOID, I32OID, STANDARDOID were missing from model INTERLIS
+
+
+ili2c 2.1.8 (2003-08-10)
+----------------------------
+- Bug: doesn't accept role PathEl. (didn't use opposide role name)
+- Bug: doesn't support inspection of an attribute defined by a DomainDef
+- Bug: join and union of abstract base tables didn't work
+- Bug: class cast exception (Table) in integrity check of extended associations
+
+
+ili2c 2.1.7 (2003-07-20)
+----------------------------
+- Fileselector improved
+- Bug XML-Reader: expect 'x' as prefix of BIDs 
+- BaseExtentionDef
+- AttributePath
+- Inspection, Aggregation Views
+- Bug XML-Schema: base values missed in extended enumerations
+- Enumeration: extending, FINAL
+- Enumeration: OTHERS
+- handle MetaDataUseDef EXTENDS
+- accept unqualified element references
+- accept IMPORTS UNQUALIFIED INTERLIS;
+- accept references to [INTERLIS.]METAOBJECT
+- Parser adapted to INTERLIS 2.2 2003-05-13
+- XML-Reader: expects BID and no longer BOID
+- XML-Reader: detects unknown basket tags
+
+
+ili2c 2.1.5 (2003-04-12)
+----------------------------
+- XML-Schema: generate xsd:enumeration to improve checking
+- Ili1-Fmt: add !!!! before TABL, TOPI
+- Ili1-Fmt: add !!!! before attribute explanation
+- XML-Schema: type IliID added to improve TID/BID checking
+- target role names must now be unique with respect to source class
+- XML-Schema: targetNamespace added
+- XML-Schema: elementFormDefault changed to "qualified"
+- XML-Schema: default Schema Namespace added
+- FunctionDef argument seperator changed to ';'
+- XML-Schema: tags of baskets addapted to ILI 2.2 encoding
+- XML-Schema: tags of inherited classes addapted to ILI 2.2 encoding
+- Bug: Ili1 to Ili2 should use qualified names to INTERLIS model elements
+- Bug Ili1: detects illegal recursive reference attribute
+- Bug Ili1: generates conflicting role names when multiple reference attributes between the same tables 
+- Bug Ili1: Hexcode parser; '0x20' throws an exception 
+- Bug XML-Schema: missing xsd:sequence in embedded associations
+- Bug: RefSys parser {CHLV03/1}
+
+
+ili2c 2.1.3 (2002-11-09)
+----------------------------
+- error message 'unexpected char' includes line number
+- Constraints
+- ObjectOrAttributePath
+- check name uniqueness inside ClassDef and AssociationDef
+- XML-Schema: wrong version in VERSION element
+- XML-Schema: components of CoordValue and ArcSegment as elements instead of attributes
+- XML-Schema: embedded inherited associations were missed 
+- XML-Schema: implementation of Basket encoding rule was 2.1 style
+- XML-Schema: not overridden viewable in extended topic got wrong name
+
+
+ili2c 2.1.2 (2002-10-26)
+----------------------------
+- XML schema generator updated
+
+
+ili2c 2.1.1 (2002-10-20)
+----------------------------
+- adapted to INTERLIS 2.2
+- Bug fixed in DEGREES and GRADS parser
+- XML-Schema: unnecessary sequence in POLYLINE removed
+- XML-Schema: required maxOccurs in POLYLINE added
+- XML-Schema: occurrence constraints in elements 'Entries', 'DATASECTION' and 'Baskets' moved from sequence to choice
+- XML-Schema: don't generate minOccurs="0" for mandatory ili-attributes
+
+ili2c 2.0.7 (2002-05-05)
+----------------------------
+- accepts BasketType without basket kind
+- accepts ConstraintsDef
+- detects additional RoleDef in extended AssociationDef
+- checks aggregation kind in extended RoleDefs
+- checks cardinality in extended RoleDefs
+- checks that no more than one RoleDef is an aggregation or composition
+- checks that an abstract RoleDef is in an abstract AssociationDef
+- accepts EXTENDED in AssociationDef
+- checks topic dependency in ViewDef, ViewProjectionDef and GraphicDef
+- some error messages didn't appear in the GUI (e.g. DATA MODEL)
+- GUI: new compiler run appends messages to log field
+- GUI: new popup menu in log field to clear it
+- GUI: switching on/off of reporting warnings didn't work
+- GUI: online help
+
+ili2c 2.0.6 (2002-04-16)
+----------------------------
+- keep IDENTs when rewriting an ili1 model
+- accept abstract TEXT attributes
+- accept definitions of reference attributes inside patterns that point to a class inside this pattern
+- Bug fixed in ViewDef and ViewProjectionDef parser (ViewDef model)
+- Bug fixed in Base-Name handling
+- Bug fixed in GraphicDef parser (minigr model)
+- Check in a selection if the restricting class is an extension of the base class
+- accept nested comments
+- Bug fixed in Dec lexer (recognize 'e' and 'E' in ili2.1 and only 'S' in ili1)
+- File selector starts in last used directory
+
+
+ili2c 2.0.5 (2002-03-23)
+----------------------------
+- check name uniqueness according to ili2.1
+- resolve DomainRefs
+- ILI2 Output: corrected DATA MODEL
+- ILI2 Output: generate unqualified references to base model elements like HALIGNMENT
+- XML-Schema: occurence constraints of attributes corrected (use=required)
+- XML-Schema: Output for ReferenceAttribute corrected
+- XML-Schema: occurence constraints of elements corrected (maxOccurs=unbounded)
+- GUI: log window sizeable
+- GUI: communicate always end of compiler run in log window
+- GUI: layout improved
+
+
+ili2c 2.0.4 (2002-02-08)
+----------------------------
+- INTERLIS 2 output
+- GUI
+- patterns (only ClassDef)
+
+ili2c 2.0.3 (2002-01-22)
+----------------------------
+- Bug fixed in UniqueEl parser (kat2014 model)
+- Lineattr encoding corrected
+- meta objects
+- new option -boid to map a MetaDataUseDef to a concrete basket
+- option -DTD renamed to -XSD
+- ili2c banner text modified
+
+ili2c 2.0.2 (2001-12-21)
+----------------------------
+- Bug fixed in INTERLIS-1-Identdef parser
+- RoleDef to XML-Schema generation added
+
+ili2c 2.0.1 (2001-11-27)
+----------------------------
+- parser adapted to INTERLIS 2.1 syntax
+- XML-Schema generation implemented
+
+ilic 1.0 (2001-07-11)
+----------------------------
+- no code changes
+- build process changed to ant (jakarta.apache.org)
+
+ilic 0.98 (not released yet)
+----------------------------
+
+- generation of XML DTDs
+- import of meta objects via XML
+- entirely different handling of line attributes
+- common code for generating INTERLIS-2 CLASS, VIEW, PROJECTION, GRAPHIC
+  and STRUCTURE
+- added several general-purpose methods to backend, mostly related to
+  polymorphism
+- large changes in view syntax and semantics, added projections
+- new UNIT INTERLIS.DIMENSIONLESS
+- in certain cases, more informative error messages are generated
+- term parser can now special-case depending on the expected type,
+  which is derived from the type of the lvalue (was needed for
+  assigning references to meta objects to parameters)
+- more type checking for assigning constant values to parameters
+- numerous bug fixes
+- simple invocation of test suite: "make -s check" Works only
+  on machines with POSIX tools (tested with GNU/Linux; should work
+  with GNU/Hurd, Digital TruUNIX, MacOS X, FreeBSD, OpenBSD etc, as well).
+  Might work on Windows when cygwin tools are installed.
+
+
+ilic 0.97 (1999-11-03)
+----------------------
+
+- strings can contain \u or \U sequences
+- ELLIPSOIDALCS instead of ELLIPTICALCS
+- uses { } instead of ( ) for reference system; was conflicting
+  with syntax for function calls
+- structured unit types as dimensions in coordinate systems
+- local attributes can be extended by function calls
+- added reference to http://www.antlr.org to information message
+- second release given to Stefan Keller <Stefan.Keller@lt.admin.ch>
+
+
+ilic 0.96 (1999-10-07)
+----------------------
+
+- generate "TEXT*20" instead of "TEXT * 20".
+- Many changes with respect to indentation and new lines.
+- Removed check against two-letter language codes.
+  ilic 0.95 required three-letter codes;
+  Stefan Keller <Stefan.Keller@lt.admin.ch>
+  wants to stay with ISO 639:1988 (e-mail 1999-10-05).
+- Changed wording of error message "err_attribute_ili1_constraintLost".
+- Fixed BUG-1999-00001, BUG-1999-00002, BUG-1999-00003
+  (see separate file "BUGS.txt").
+
+
+ilic 0.95 (1999-09-07)
+----------------------
+
+- first release given to Stefan Keller <Stefan.Keller@lt.admin.ch>
