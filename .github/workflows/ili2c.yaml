@@ -168,8 +168,10 @@ jobs:
         run: |
           graalvm-ce-java8-20.1.0\bin\gu.cmd install native-image
       - name: 'Set up Visual C Build Tools Workload for Visual Studio 2017 Build Tools'
+        # run: |
+        #   choco install visualstudio2017-workload-vctools
         run: |
-          choco install visualstudio2017-workload-vctools
+          choco install windows-sdk-7.1 kb2519277
       - name: 'Get Version Number'
         run: |
           echo "::set-env name=VERSION::$(./gradlew properties -Drelease -q | grep "version:" | awk '{print $2}')"
@@ -184,8 +186,11 @@ jobs:
         shell: cmd
         env:
           JAVA_HOME: ./graalvm-ce-java8-20.1.0
+        # run: |
+        #   call "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
+        #   ./graalvm-ce-java11-20.1.0/bin/native-image --no-server --no-fallback --report-unsupported-elements-at-runtime -cp ili2c.jar
         run: |
-          call "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
+          call "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd"
           ./graalvm-ce-java8-20.1.0/bin/native-image --no-server --no-fallback --report-unsupported-elements-at-runtime -cp ili2c.jar
       - name: 'Get Release URL'
         if: contains(github.ref, 'v')
