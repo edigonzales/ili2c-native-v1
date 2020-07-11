@@ -110,9 +110,9 @@ jobs:
         with:
           name: 'ili2c-${{env.VERSION}}-all.jar'
 
-      - name: Display structure of downloaded files
-        run: ls -R
-        
+      # - name: Display structure of downloaded files
+      #   run: ls -R
+
       - name: 'Get Release URL'
         if: contains(github.ref, 'v')
         uses: actions/download-artifact@v2-preview
@@ -125,7 +125,7 @@ jobs:
           echo "::set-env name=UPLOAD_URL::$(cat upload_url.txt)"
       - name: 'Build Native Image'
         run: |
-          native-image --no-server --no-fallback --report-unsupported-elements-at-runtime -cp ili2c-${{env.VERSION}}-all.jar
+          native-image --no-server --no-fallback --report-unsupported-elements-at-runtime -cp ili2c.jar
       - name: 'Publish Native Image'
         if: success()
         uses: actions/upload-artifact@v2-preview
