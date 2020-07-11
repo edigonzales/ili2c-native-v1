@@ -25,3 +25,4 @@ Code adjustments:
 - No gui stuff (comment out ch.interlis.ili2c.gui.Main.* classes in Main.java is enough)
 - Created `native-image.properties` and 'reflection-config.json` as needed.
 
+- foo
