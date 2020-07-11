@@ -55,7 +55,8 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
           upload_url: ${{steps.create_release.outputs.upload_url}}
-          asset_path: build/libs/ili2c-${{env.VERSION}}-all.jar
+          #asset_path: build/libs/ili2c-${{env.VERSION}}-all.jar
+          asset_path: build/libs/ili2c.jar
           asset_name: ili2c-${{env.VERSION}}-all.jar
           asset_content_type: application/java-archive
 
