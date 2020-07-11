@@ -41,3 +41,10 @@ Make a release:
 3. `git tag v5.1.2`
 4. `git push origin --tags
 
+
+Delete tag:
+
+```
+git tag -d v0.0.3
+git push origin :refs/tags/v0.0.3
+```
