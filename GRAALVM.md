@@ -6,7 +6,7 @@ gu install native-image
 
 Build ili2c.jar:
 ```
-gradle clean build
+./gradlew clean build
 ```
 
 Build native image:
