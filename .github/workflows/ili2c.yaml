@@ -30,7 +30,7 @@ jobs:
       - name: 'Publish JAR'
         uses: actions/upload-artifact@v2-preview
         with:
-          name: 'ili2c-${{env.VERSION}}-all.jar'
+          name: 'ili2c-${{env.VERSION}}-nogui.jar'
           path: build/libs/ili2c-graal.jar
 
       - name: 'Create Release'
@@ -58,7 +58,7 @@ jobs:
         with:
           upload_url: ${{steps.create_release.outputs.upload_url}}
           asset_path: build/libs/ili2c-graal.jar
-          asset_name: ili2c-${{env.VERSION}}-all.jar
+          asset_name: ili2c-${{env.VERSION}}-nogui.jar
           asset_content_type: application/java-archive
 
       - name: 'Write Upload URL To File'
@@ -109,7 +109,7 @@ jobs:
       - name: 'Get JAR Artifact'
         uses: actions/download-artifact@v2-preview
         with:
-          name: 'ili2c-${{env.VERSION}}-all.jar'
+          name: 'ili2c-${{env.VERSION}}-nogui.jar'
       - name: Display structure of downloaded files
         run: ls -la
 
@@ -178,7 +178,7 @@ jobs:
       - name: 'Get JAR Artifact'
         uses: actions/download-artifact@v2-preview
         with:
-          name: 'ili2c-${{env.VERSION}}-all.jar'
+          name: 'ili2c-${{env.VERSION}}-nogui.jar'
 
       - name: 'Build Native Image'
         shell: cmd
