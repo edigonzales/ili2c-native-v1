@@ -110,9 +110,8 @@ jobs:
         uses: actions/download-artifact@v2-preview
         with:
           name: 'ili2c-${{env.VERSION}}-all.jar'
-
-      # - name: Display structure of downloaded files
-      #   run: ls -R
+      - name: Display structure of downloaded files
+        run: ls -la
 
       - name: 'Get Release URL'
         # if: contains(github.ref, 'v')
