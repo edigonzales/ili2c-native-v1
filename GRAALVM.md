@@ -11,7 +11,7 @@ Build ili2c.jar:
 
 Build native image:
 ```
-native-image --no-server --verbose --report-unsupported-elements-at-runtime --native-image-info -cp build/libs/ili2c.jar -H:+ReportExceptionStackTraces
+native-image --no-server --verbose --report-unsupported-elements-at-runtime --native-image-info -cp build/libs/ili2c-graal.jar -H:+ReportExceptionStackTraces
 ```
 
 Run native binary ili2c, e.g.:

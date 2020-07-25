@@ -24,8 +24,7 @@ allprojects {
 	}
 }
 
-//version '5.1.2'+System.getProperty('release','-SNAPSHOT')
-version '0.0.12'+System.getProperty('release','-SNAPSHOT')
+version '5.1.2'+System.getProperty('release','-SNAPSHOT')
 
 configurations {
 	scpAntTask
@@ -39,7 +38,7 @@ configurations {
 
 dependencies {
     implementation "ch.interlis:iox-api:1.0.3"
-    implementation("ch.interlis:iox-ili:1.21.0") {
+    implementation("ch.interlis:iox-ili:1.21.1+") {
     	exclude group: 'net.iharder', module: 'base64'
     	exclude group: 'com.vividsolutions', module: 'jts-core'
     }
@@ -91,20 +90,19 @@ task fatjar(type: Jar) {
 }
 
 task graalFatjar(type: Jar) {
-	archiveFileName='ili2c-graal.jar'
-  manifest {
+    archiveFileName='ili2c-graal.jar'
+    manifest {
     attributes(
-      "Main-Class": "ch.interlis.ili2c.MainGraal"
-    )
-  }
-  from sourceSets.main.output
-exclude('ch/interlis/ili2c/Main.class') 
+        "Main-Class": "ch.interlis.ili2c.MainGraal"
+        )
+    }
+    from sourceSets.main.output
+    //exclude('ch/interlis/ili2c/Main.class') 
     dependsOn configurations.runtimeClasspath
     from {
         configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
     }
 }
-
 
 task bindist(type: Zip, dependsOn: fatjar) {
 	baseName = project.name
